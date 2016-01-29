@@ -51,6 +51,7 @@ Collate:
     'roclet-namespace.R'
     'roclet-rd.R'
     'roclet-vignette.R'
+    'roclet-quickcheck.R'
     'roclet.R'
     'roxygen-tag.R'
     'roxygen.R'
@@ -64,4 +65,4 @@ Collate:
     'usage.R'
     'util-locale.R'
     'utils.R'
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000
