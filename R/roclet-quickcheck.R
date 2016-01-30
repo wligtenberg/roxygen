@@ -62,7 +62,7 @@ block_to_test <- function(block, base_path, env) {
                   function(x) {
                     paste(
                         x$name, 
-                        paste0(stringr::str_split(x$description, " ")[[1]][[1]], "()"), 
+                        paste0("r", stringr::str_split(x$description, " ")[[1]][[1]], "()"), 
                         sep = " = ")}), 
               collapse = ",\n"), ","), 
       paste0(block$quickcheck, "),"),
