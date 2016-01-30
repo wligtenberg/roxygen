@@ -24,7 +24,8 @@ Suggests:
     testthat (>= 0.8.0),
     knitr,
     devtools,
-    rmarkdown
+    rmarkdown,
+    quickcheck
 VignetteBuilder: knitr
 LinkingTo: Rcpp
 Collate:
