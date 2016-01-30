@@ -67,7 +67,7 @@ To get the current development version from github:
 
 ```R
 # install.packages("devtools")
-devtools::install_github("klutometis/roxygen")
+devtools::install_github("wligtenberg/roxygen", ref = "quickcheck")
 ```
 
 # Running
@@ -98,10 +98,12 @@ If you have a simple package, you can use `roxygenise()`, but for anything more 
 
 * `vignette_roclet`: builds vignettes using `tools::buildVignette()`.
 
+* `quickcheck_roclet`: builds test scripts using `quickcheck::test`.
+
 By default, `roxygenise` will run the first three, but you can choose which ones to run using the `roclet` parameter, or field `Roxygen` in your `DESCRIPTION`:
 
 ```
-Roxygen: list(roclets = c("rd", "collate"))
+Roxygen: list(roclets = c("rd", "collate", "quickcheck"))
 ```
 
 -----------
