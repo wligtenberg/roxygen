@@ -1,0 +1,38 @@
+---
+title: "quickcheck tests generation"
+author: "Willem Ligtenberg"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{quickcheck tests generation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
+```
+
+Quickcheck is a package that allows randomised testing of functions. It implements a form of model based testing. Where you define the form the function arguments can take and then a test which needs to be true for a correct result.
+
+For a more detailed description I would like to refer the reader to the [quickcheck](https://github.com/RevolutionAnalytics/quickcheck) github page.
+
+When writing roxygen comments it is already useful to denote the type of the argument.
+This type can then be used for model based testing, if we also supply the test.
+
+This extention of roxygen implements the `@quickcheck` decorator for the test. To specify the type of the argument, the first word after the parameter is used (see example below).
+
+```{r, eval = FALSE}
+#' Add one to a numeric value
+#' @param x numeric 
+#' @return numeric x+1
+#' @author Willem Ligtenberg
+#' @export
+#' @name plus_1
+#' @quickcheck plus_1(x) == x+1
+plus_1 <- function(x){
+  return(x+1)
+}
+```
+
+This will generate a file in the tests directory that will be executed during a normal R CMD check.
