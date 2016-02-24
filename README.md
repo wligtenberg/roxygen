@@ -1,9 +1,5 @@
 # roxygen2
 
-[![Build Status](https://travis-ci.org/klutometis/roxygen.png)](https://travis-ci.org/klutometis/roxygen)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/roxygen2)](http://cran.r-project.org/package=roxygen2)
-[![Coverage Status](https://img.shields.io/codecov/c/github/klutometis/roxygen/master.svg)](https://codecov.io/github/klutometis/roxygen?branch=master)
-
 > all' hileth', Hephaiste; didou d'areten te kai olbon.*
 > --Homer, 7th century BCE
 
@@ -63,11 +59,16 @@ To get the current released version from CRAN:
 install.packages("roxygen2")
 ```
 
-To get the current development version from github:
+## Added support for quickcheck test generation
+
+This version has added support for [quickcheck](https://github.com/RevolutionAnalytics/quickcheck) test generation.
+For more information about quickcheck I would like to refer the reader to their github page.
+
+To get this development version from github:
 
 ```R
 # install.packages("devtools")
-devtools::install_github("wligtenberg/roxygen", ref = "quickcheck")
+devtools::install_github("wligtenberg/roxygen")
 ```
 
 # Running
@@ -98,12 +99,12 @@ If you have a simple package, you can use `roxygenise()`, but for anything more 
 
 * `vignette_roclet`: builds vignettes using `tools::buildVignette()`.
 
-* `quickcheck_roclet`: builds test scripts using `quickcheck::test`.
+* `quickcheck_roclet`: produces quickcheck test files in the /tests directory.
 
 By default, `roxygenise` will run the first three, but you can choose which ones to run using the `roclet` parameter, or field `Roxygen` in your `DESCRIPTION`:
 
 ```
-Roxygen: list(roclets = c("rd", "collate", "quickcheck"))
+Roxygen: list(roclets = c("rd", "collate","namespace", "quickcheck"))
 ```
 
 -----------
