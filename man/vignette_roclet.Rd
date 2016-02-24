@@ -21,6 +21,6 @@ field in your project options.
 }
 \seealso{
 Other roclets: \code{\link{namespace_roclet}},
-  \code{\link{rd_roclet}}
+  \code{\link{quickcheck_roclet}}, \code{\link{rd_roclet}}
 }
 

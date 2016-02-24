@@ -14,6 +14,7 @@ document that functions in your package.
 \code{vignette("rd", package = "roxygen2")}
 
 Other roclets: \code{\link{namespace_roclet}},
+  \code{\link{quickcheck_roclet}},
   \code{\link{vignette_roclet}}
 }
 

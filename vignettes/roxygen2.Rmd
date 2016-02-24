@@ -38,6 +38,8 @@ This vignette provides a high-level description of roxygen2 and how the three ma
 * [Controlling collation order](collate.html) describes how roxygen2
   controls file loading order if you need to make sure one file is
   loaded before another.
+  
+* [Generating quickcheck test files](quickcheck.html) describes how to generate            quickcheck based test files.
 
 # Running roxygen
 
